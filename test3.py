@@ -15,16 +15,17 @@
 #             x = x + 1 #如果当前字符是空格，则取下一位验证
 #         else:
 #             break # 起始出现非空格字符，前面部分索引结束，跳出循环
-#     if x == length:
-#         s = ''
-#         return s
+#     # if x == length:
+#     #     s = ''
+#         # return s
 #     while s[length - 1] == ' ': 
 #         # if length > x:
 #         length = length-1  #从尾部开始检索，如果当前是空格，则往前检索
 #         if length == 0:
 #             s = ''
 #             return s
-#     return s[x:length+1]
+#     print(x,length)
+#     return s[x:length]
 
 
 # Mark's
@@ -37,30 +38,32 @@
 #         if s[right] == ' ':
 #             right = right - 1
 #         if left > right:
-#             return ""
-#     return s[left:right]
+#             s = '' 
+#             return s
+#         print(left,right)
+#     return s[left:right]  #这是个死循环23333
 
-def trim(s):
-    l = len(s)
-    n = 0
-    x = 0
-    if l == 0:
-        return s
-    while n < l:
-        if s[n] == ' ':
-            n = n + 1
-        else:
-            print(n)
-            break
-    s2 = s[::-1] #把list倒序
-    while x < l:
-        if s2[x] == ' ':
-            x = x + 1
-        else:
-            print(x)
-            break
-    x = l - x
-    return s[n:x]
+# def trim(s):
+#     l = len(s)
+#     n = 0
+#     x = 0
+#     if l == 0:
+#         return s
+#     while n < l:
+#         if s[n] == ' ':
+#             n = n + 1
+#         else:
+#             print(n)
+#             break
+#     s2 = s[::-1] #把list倒序
+#     while x < l:
+#         if s2[x] == ' ':
+#             x = x + 1
+#         else:
+#             print(x)
+#             break
+#     x = l - x
+#     return s[n:x]
 
  
 if trim('hello  ') != 'hello':
