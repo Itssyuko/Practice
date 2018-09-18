@@ -5,27 +5,27 @@
 # 2. have some spaces at the beginning or some spaces at the end of the string,or both
 # 3. the string consists of a number of spaces
 
-# def trim(s):
-#     length = len(s) 
-#     if length == 0:  # 如果s是空字符串，直接返回
-#         return s
-#     x = 0 
-#     while x < length:
-#         if s[x] == ' ':
-#             x = x + 1 #如果当前字符是空格，则取下一位验证
-#         else:
-#             break # 起始出现非空格字符，前面部分索引结束，跳出循环
-#     # if x == length:
-#     #     s = ''
-#         # return s
-#     while s[length - 1] == ' ': 
-#         # if length > x:
-#         length = length-1  #从尾部开始检索，如果当前是空格，则往前检索
-#         if length == 0:
-#             s = ''
-#             return s
-#     print(x,length)
-#     return s[x:length]
+def trim(s):
+    length = len(s) 
+    if length == 0:  # 如果s是空字符串，直接返回
+        return s
+    x = 0 
+    while x < length:
+        if s[x] == ' ':
+            x = x + 1 #如果当前字符是空格，则取下一位验证
+        else:
+            break # 起始出现非空格字符，前面部分索引结束，跳出循环
+    # if x == length:
+    #     s = ''
+        # return s
+    while s[length - 1] == ' ': 
+        # if length > x:
+        length = length-1  #从尾部开始检索，如果当前是空格，则往前检索
+        if length == 0:
+            s = ''
+            return s
+    print(x,length)
+    return s[x:length]
 
 
 # Mark's
